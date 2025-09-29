@@ -64,9 +64,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
-
-
-Route::get('/say', function () {
-    return "Hello World";
-});
