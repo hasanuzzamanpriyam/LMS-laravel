@@ -22,7 +22,7 @@ class adminProfileController extends Controller
         $user = Auth::user();
         $data = $request->validated();
 
-        if ($request->file('photo')) {
+        if ($request->hasFile('photo')) {
             // Unlink old image if it exists
             if ($user->photo) {
                 Storage::disk('public')->delete($user->photo);
