@@ -33,7 +33,6 @@ Route::middleware(['auth', 'verified', 'role:admin'])->prefix('admin')->name('ad
 
     // category routes
     Route::resource('categories', categoryController::class);
-
     // sub category routes
     Route::resource('subcategories', subCategoryController::class);
 });
